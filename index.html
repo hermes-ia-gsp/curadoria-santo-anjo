@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Curadoria semanal — Santo Anjo | Hermes IA</title>
+  <style>
+    :root{
+      --gs-teal:#0f7568;
+      --gs-teal-dark:#07594f;
+      --gs-lime:#bed75a;
+      --gs-yellow:#ffc713;
+      --gs-orange:#ec4f24;
+      --gs-charcoal:#4c4446;
+      --gs-bg:#f6f7f1;
+      --gs-card:#ffffff;
+      --gs-muted:#6c6667;
+      --gs-line:#e7e3d8;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--gs-bg);font-family:Inter,Arial,Helvetica,sans-serif;color:var(--gs-charcoal)}
+    a{color:inherit}
+    .brand-bars{display:grid;grid-template-columns:1fr;gap:9px;width:240px;margin-bottom:28px}
+    .bar{height:28px;border-radius:0 999px 999px 0}.lime{background:var(--gs-lime);width:78%}.yellow{background:var(--gs-yellow);width:100%}.orange{background:var(--gs-orange);width:100%}.teal{background:var(--gs-teal);width:100%}
+    .hero{background:#fff;padding:42px 0 34px;border-bottom:1px solid var(--gs-line)}
+    .wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+    .hero-grid{display:grid;grid-template-columns:280px 1fr;gap:34px;align-items:center}
+    .eyebrow{font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--gs-teal);font-weight:800;margin-bottom:10px}
+    h1{margin:0;color:var(--gs-charcoal);font-size:44px;line-height:1.03;letter-spacing:.01em}.accent{color:var(--gs-teal)}
+    .subtitle{margin:16px 0 0;color:var(--gs-muted);font-size:17px;line-height:1.55;max-width:720px}
+    .meta{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px;color:var(--gs-muted);font-size:14px;line-height:1.5}.meta span{display:inline-flex;align-items:center}.meta span+span:before{content:'•';margin-right:10px;color:var(--gs-yellow);font-weight:900}
+    .section{padding:34px 0}.section-title{display:flex;align-items:end;justify-content:space-between;gap:18px;margin-bottom:18px}h2{margin:0;color:var(--gs-teal-dark);font-size:26px}.hint{margin:0;color:var(--gs-muted);font-size:14px;line-height:1.5}
+    .summary{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.summary-card{background:#fff;border:1px solid var(--gs-line);border-radius:18px;padding:20px;box-shadow:0 8px 26px rgba(76,68,70,.06)}.summary-card strong{display:block;color:var(--gs-teal-dark);margin-bottom:8px;font-size:16px}.summary-card p{margin:0;color:var(--gs-muted);font-size:14px;line-height:1.55}
+    .cards{display:grid;grid-template-columns:1fr;gap:16px}.card{background:var(--gs-card);border:1px solid var(--gs-line);border-radius:22px;overflow:hidden;box-shadow:0 10px 28px rgba(76,68,70,.07)}.card-top{display:grid;grid-template-columns:8px 1fr}.stripe{background:var(--gs-teal)}.stripe.yellow{background:var(--gs-yellow)}.stripe.orange{background:var(--gs-orange)}.stripe.lime{background:var(--gs-lime)}.card-body{padding:22px 24px}.tags{display:block;margin-bottom:12px;color:var(--gs-teal-dark);font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.06em;line-height:1.4}.tag{display:inline;padding:0;background:transparent;color:inherit;white-space:nowrap}.tag+.tag:before{content:' / ';color:var(--gs-yellow);font-weight:900;margin:0 4px}.tag.yellow,.tag.orange,.tag.lime{background:transparent;color:inherit}
+    h3{margin:0 0 8px;color:var(--gs-charcoal);font-size:21px}.source{font-size:13px;color:var(--gs-muted);line-height:1.5;margin:0 0 14px}.card-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}.box{background:#fafbf8;border:1px solid #edf0e6;border-radius:14px;padding:14px}.box strong{display:block;color:var(--gs-teal-dark);font-size:13px;text-transform:uppercase;letter-spacing:.05em;margin-bottom:6px}.box p{margin:0;color:#4f4a4b;font-size:14px;line-height:1.55}.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}.btn{display:inline-block;text-decoration:none;border-radius:999px;padding:11px 16px;font-size:14px;font-weight:800;border:1px solid transparent}.btn.vote{background:var(--gs-teal);color:white}.btn.vote:hover{background:var(--gs-teal-dark)}.btn.secondary{background:#fff;color:var(--gs-teal-dark);border-color:#cdded9}.btn.alt{background:var(--gs-yellow);color:#4c4446}.btn.no{background:#fff;color:#9b3417;border-color:#ffd0bf}
+    .matrix{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--gs-line);border-radius:18px;overflow:hidden;background:white}.matrix>div{padding:20px;border-right:1px solid var(--gs-line)}.matrix>div:last-child{border-right:0}.matrix strong{display:block;margin-bottom:10px}.matrix ul{margin:0;padding-left:18px;color:#4f4a4b;line-height:1.65;font-size:14px}.approve strong{color:var(--gs-teal)}.watch strong{color:#8a6600}.avoid strong{color:#a13718}
+    .note{background:#fff8e5;border-left:6px solid var(--gs-yellow);border-radius:16px;padding:18px 20px;color:#5e5545;line-height:1.6;font-size:14px}.footer{background:var(--gs-charcoal);color:#fff;padding:24px 0;margin-top:28px}.footer p{margin:0;color:#eee;font-size:13px;line-height:1.5}.footer strong{color:var(--gs-lime)}
+    @media(max-width:760px){.hero-grid,.summary,.card-grid,.matrix{grid-template-columns:1fr}.matrix>div{border-right:0;border-bottom:1px solid var(--gs-line)}h1{font-size:34px}.brand-bars{width:190px}}
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <div class="brand-bars" aria-label="Cores Great Schools">
+          <div class="bar lime"></div><div class="bar yellow"></div><div class="bar orange"></div><div class="bar teal"></div>
+        </div>
+      </div>
+      <div>
+        <div class="eyebrow">Hermes IA · Great Schools Platform</div>
+        <h1>Curadoria semanal<br><span class="accent">Colégio Santo Anjo</span></h1>
+        <p class="subtitle">Referências orgânicas e oportunidades de adaptação para avaliação das Coordenadoras de Marketing.</p>
+        <div class="meta">
+          <span class="pill">Rodada: 20/08/2026</span>
+          <span class="pill">Fontes públicas</span>
+          <span class="pill">Instagram/TikTok sem login autenticado</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="wrap">
+        <div class="section-title">
+          <h2>Resumo executivo</h2>
+          <p class="hint">Leitura rápida para decisão.</p>
+        </div>
+        <div class="summary">
+          <div class="summary-card"><strong>Rotina real vende confiança</strong><p>Bastidores, cuidado e vivência concreta funcionam melhor que promessas institucionais abstratas.</p></div>
+          <div class="summary-card"><strong>Bilinguismo como mundo</strong><p>O tema ganha força quando aparece como descoberta, repertório, futuro e segurança para se comunicar.</p></div>
+          <div class="summary-card"><strong>POV aproxima o Ensino Médio</strong><p>Student life, rotina e linguagem de aluno ajudam a tirar a comunicação do tom institucional.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:10px">
+      <div class="wrap">
+        <div class="section-title">
+          <div><h2>Vote nos conteúdos para produzir</h2><p class="hint">Os botões abaixo podem apontar para Google Forms, Typeform, Airtable ou um endpoint interno. Nesta versão, estão preparados como links de voto configuráveis.</p></div>
+        </div>
+
+        <div class="cards">
+          <article class="card"><div class="card-top"><div class="stripe"></div><div class="card-body">
+            <div class="tags"><span class="tag">Educação Infantil</span><span class="tag lime">Rotina</span></div>
+            <h3>1. Um dia na Educação Infantil Santo Anjo</h3>
+            <p class="source">Referência-base: Colégio Metropolitano de Indaial · YouTube · 1,2 mil views observados · 43s</p>
+            <div class="card-grid"><div class="box"><strong>Por que funciona</strong><p>A família consegue imaginar a criança segura, tranquila e bem cuidada naquele ambiente.</p></div><div class="box"><strong>Adaptação sugerida</strong><p>Série por unidade/segmento mostrando acolhimento, autonomia, cuidado e descobertas.</p></div></div>
+            <div class="actions"><a class="btn vote" href="mailto:caroline.souza@greatschools.com.br?subject=Voto%20curadoria%20Santo%20Anjo%20-%20Conte%C3%BAdo%201&body=Meu%20voto%3A%20Produzir%20o%20conte%C3%BAdo%201%20-%20Um%20dia%20na%20Educa%C3%A7%C3%A3o%20Infantil%20Santo%20Anjo.">Votar para produzir</a><a class="btn alt" href="mailto:caroline.souza@greatschools.com.br?subject=Coment%C3%A1rio%20curadoria%20-%20Conte%C3%BAdo%201&body=Coment%C3%A1rio%20sobre%20o%20conte%C3%BAdo%201%3A%20">Comentar ajuste</a></div>
+          </div></div></article>
+
+          <article class="card"><div class="card-top"><div class="stripe yellow"></div><div class="card-body">
+            <div class="tags"><span class="tag yellow">Berçário</span><span class="tag">Cuidado</span></div>
+            <h3>2. Histórias que ganham vida no berçário</h3>
+            <p class="source">Referência-base: Colégio Sapucaia · YouTube · 710 views observados · 2min39s</p>
+            <div class="card-grid"><div class="box"><strong>Por que funciona</strong><p>Transforma uma rotina simples em prova de vínculo, repertório e intenção pedagógica.</p></div><div class="box"><strong>Adaptação sugerida</strong><p>Micro-histórias do Anjinho: leitura, chegada, adaptação, alimentação, descanso e primeiros vínculos.</p></div></div>
+            <div class="actions"><a class="btn vote" href="mailto:caroline.souza@greatschools.com.br?subject=Voto%20curadoria%20Santo%20Anjo%20-%20Conte%C3%BAdo%202&body=Meu%20voto%3A%20Produzir%20o%20conte%C3%BAdo%202%20-%20Hist%C3%B3rias%20que%20ganham%20vida%20no%20ber%C3%A7%C3%A1rio.">Votar para produzir</a><a class="btn alt" href="mailto:caroline.souza@greatschools.com.br?subject=Coment%C3%A1rio%20curadoria%20-%20Conte%C3%BAdo%202&body=Coment%C3%A1rio%20sobre%20o%20conte%C3%BAdo%202%3A%20">Comentar ajuste</a></div>
+          </div></div></article>
+
+          <article class="card"><div class="card-top"><div class="stripe orange"></div><div class="card-body">
+            <div class="tags"><span class="tag orange">Bilinguismo</span><span class="tag lime">Futuro</span></div>
+            <h3>3. Bilinguismo que cria asas</h3>
+            <p class="source">Referência-base: Colégio Sapucaia · YouTube · 192 views observados · 2min45s</p>
+            <div class="card-grid"><div class="box"><strong>Por que funciona</strong><p>Conecta idioma com descoberta de mundo, curiosidade, confiança e futuro.</p></div><div class="box"><strong>Adaptação sugerida</strong><p>Experiências reais em inglês/trilíngue: cantar, brincar, perguntar, explorar e nomear descobertas.</p></div></div>
+            <div class="actions"><a class="btn vote" href="mailto:caroline.souza@greatschools.com.br?subject=Voto%20curadoria%20Santo%20Anjo%20-%20Conte%C3%BAdo%203&body=Meu%20voto%3A%20Produzir%20o%20conte%C3%BAdo%203%20-%20Bilinguismo%20que%20cria%20asas.">Votar para produzir</a><a class="btn alt" href="mailto:caroline.souza@greatschools.com.br?subject=Coment%C3%A1rio%20curadoria%20-%20Conte%C3%BAdo%203&body=Coment%C3%A1rio%20sobre%20o%20conte%C3%BAdo%203%3A%20">Comentar ajuste</a></div>
+          </div></div></article>
+
+          <article class="card"><div class="card-top"><div class="stripe"></div><div class="card-body">
+            <div class="tags"><span class="tag">Objeções dos pais</span><span class="tag orange">Bilinguismo</span></div>
+            <h3>4. 3 sinais de que o inglês está virando vivência</h3>
+            <p class="source">Referência-base: “Bilinguismo de fachada” · Folha Vitória · 1,1 mil views observados · 1min02s</p>
+            <div class="card-grid"><div class="box"><strong>Por que funciona</strong><p>Ajuda a família a decidir com mais segurança sem parecer venda direta.</p></div><div class="box"><strong>Adaptação sugerida</strong><p>Conteúdo educativo e elegante sobre critérios para avaliar bilinguismo real.</p></div></div>
+            <div class="actions"><a class="btn vote" href="mailto:caroline.souza@greatschools.com.br?subject=Voto%20curadoria%20Santo%20Anjo%20-%20Conte%C3%BAdo%204&body=Meu%20voto%3A%20Produzir%20o%20conte%C3%BAdo%204%20-%203%20sinais%20de%20que%20o%20ingl%C3%AAs%20est%C3%A1%20virando%20viv%C3%AAncia.">Votar para produzir</a><a class="btn alt" href="mailto:caroline.souza@greatschools.com.br?subject=Coment%C3%A1rio%20curadoria%20-%20Conte%C3%BAdo%204&body=Coment%C3%A1rio%20sobre%20o%20conte%C3%BAdo%204%3A%20">Comentar ajuste</a></div>
+          </div></div></article>
+
+          <article class="card"><div class="card-top"><div class="stripe lime"></div><div class="card-body">
+            <div class="tags"><span class="tag lime">Ensino Médio</span><span class="tag">Student life</span></div>
+            <h3>5. POV: rotina das Águias que voam alto</h3>
+            <p class="source">Referências-base: After School Routine + POV student life · YouTube · 366,6 mil / 15,6 mil views observados</p>
+            <div class="card-grid"><div class="box"><strong>Por que funciona</strong><p>Coloca o aluno como protagonista e aproxima a linguagem do universo adolescente.</p></div><div class="box"><strong>Adaptação sugerida</strong><p>Chegada, aulas, projeto, intervalo, High School Americano, estudo e escolha de futuro.</p></div></div>
+            <div class="actions"><a class="btn vote" href="mailto:caroline.souza@greatschools.com.br?subject=Voto%20curadoria%20Santo%20Anjo%20-%20Conte%C3%BAdo%205&body=Meu%20voto%3A%20Produzir%20o%20conte%C3%BAdo%205%20-%20POV%20rotina%20das%20%C3%81guias%20que%20voam%20alto.">Votar para produzir</a><a class="btn alt" href="mailto:caroline.souza@greatschools.com.br?subject=Coment%C3%A1rio%20curadoria%20-%20Conte%C3%BAdo%205&body=Coment%C3%A1rio%20sobre%20o%20conte%C3%BAdo%205%3A%20">Comentar ajuste</a></div>
+          </div></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <div class="section-title"><h2>Matriz de decisão</h2></div>
+        <div class="matrix">
+          <div class="approve"><strong>Aprovar agora</strong><ul><li>Berçário/histórias</li><li>Bilinguismo como descoberta</li><li>POV Ensino Médio</li></ul></div>
+          <div class="watch"><strong>Monitorar</strong><ul><li>Student life internacional</li><li>Humor com professores</li><li>Conteúdos editoriais</li></ul></div>
+          <div class="avoid"><strong>Evitar por enquanto</strong><ul><li>Peças genéricas de matrícula</li><li>Promessas sem diferencial</li><li>Cópia literal de formatos</li></ul></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:0">
+      <div class="wrap"><div class="note"><strong>Limitações da coleta:</strong> Instagram sem sessão autenticada; TikTok com captcha/limitações públicas; métricas de salvamentos, compartilhamentos e comentários não foram verificadas. Dados refletem apenas informações públicas observadas.</div></div>
+    </section>
+  </main>
+
+  <footer class="footer"><div class="wrap"><p><strong>Hermes IA</strong> · Agente de Pesquisa e Referências · Curadoria para avaliação das Coordenadoras de Marketing</p></div></footer>
+</body>
+</html>
