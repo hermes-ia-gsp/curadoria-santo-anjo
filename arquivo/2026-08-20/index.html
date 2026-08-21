@@ -29,7 +29,7 @@
     h1{margin:0;color:var(--gs-charcoal);font-size:44px;line-height:1.03;letter-spacing:.01em}.accent{color:var(--gs-teal)}
     .subtitle{margin:16px 0 0;color:var(--gs-muted);font-size:17px;line-height:1.55;max-width:720px}
     .meta{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px;color:var(--gs-muted);font-size:14px;line-height:1.5}.meta span{display:inline-flex;align-items:center}.meta span+span:before{content:'•';margin-right:10px;color:var(--gs-yellow);font-weight:900}
-    .section{padding:34px 0}.section-title{display:flex;align-items:end;justify-content:space-between;gap:18px;margin-bottom:18px}h2{margin:0;color:var(--gs-teal-dark);font-size:26px}.hint{margin:0;color:var(--gs-muted);font-size:14px;line-height:1.5}
+    .section{padding:34px 0}.section-title{display:flex;align-items:end;justify-content:space-between;gap:18px;margin-bottom:18px}.section-title.stacked{display:block}.section-title.stacked .hint{margin-top:6px}h2{margin:0;color:var(--gs-teal-dark);font-size:26px}.hint{margin:0;color:var(--gs-muted);font-size:14px;line-height:1.5}
     .summary{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.summary-card{background:#fff;border:1px solid var(--gs-line);border-radius:18px;padding:20px;box-shadow:0 8px 26px rgba(76,68,70,.06)}.summary-card strong{display:block;color:var(--gs-teal-dark);margin-bottom:8px;font-size:16px}.summary-card p{margin:0;color:var(--gs-muted);font-size:14px;line-height:1.55}
     .cards{display:grid;grid-template-columns:1fr;gap:16px}.card{background:var(--gs-card);border:1px solid var(--gs-line);border-radius:22px;overflow:hidden;box-shadow:0 10px 28px rgba(76,68,70,.07)}.card-top{display:grid;grid-template-columns:8px 1fr}.stripe{background:var(--gs-teal)}.stripe.yellow{background:var(--gs-yellow)}.stripe.orange{background:var(--gs-orange)}.stripe.lime{background:var(--gs-lime)}.card-body{padding:22px 24px}.tags{display:block;margin-bottom:12px;color:var(--gs-teal-dark);font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.06em;line-height:1.4}.tag{display:inline;padding:0;background:transparent;color:inherit;white-space:nowrap}.tag+.tag:before{content:' / ';color:var(--gs-yellow);font-weight:900;margin:0 4px}.tag.yellow,.tag.orange,.tag.lime{background:transparent;color:inherit}
     h3{margin:0 0 8px;color:var(--gs-charcoal);font-size:21px}.source{font-size:13px;color:var(--gs-muted);line-height:1.5;margin:0 0 14px}.card-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}.box{background:#fafbf8;border:1px solid #edf0e6;border-radius:14px;padding:14px}.box strong{display:block;color:var(--gs-teal-dark);font-size:13px;text-transform:uppercase;letter-spacing:.05em;margin-bottom:6px}.box p{margin:0;color:#4f4a4b;font-size:14px;line-height:1.55}.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}.btn{display:inline-block;text-decoration:none;border-radius:999px;padding:11px 16px;font-size:14px;font-weight:800;border:1px solid transparent}.btn.vote{background:var(--gs-teal);color:white}.btn.vote:hover{background:var(--gs-teal-dark)}.btn.secondary{background:#fff;color:var(--gs-teal-dark);border-color:#cdded9}.btn.alt{background:var(--gs-yellow);color:#4c4446}.btn.no{background:#fff;color:#9b3417;border-color:#ffd0bf}
@@ -66,10 +66,7 @@
   <main>
     <section class="section">
       <div class="wrap">
-        <div class="section-title">
-          <h2>Resumo executivo</h2>
-          <p class="hint">Leitura rápida para decisão.</p>
-        </div>
+        <div class="section-title stacked"><h2>Resumo executivo</h2><p class="hint">Leitura rápida para decisão.</p></div>
         <div class="summary">
           <div class="summary-card"><strong>Rotina real vende confiança</strong><p>Bastidores, cuidado e vivência concreta funcionam melhor que promessas institucionais abstratas.</p></div>
           <div class="summary-card"><strong>Bilinguismo como mundo</strong><p>O tema ganha força quando aparece como descoberta, repertório, futuro e segurança para se comunicar.</p></div>
