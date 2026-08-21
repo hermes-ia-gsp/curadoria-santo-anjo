@@ -2,4 +2,5 @@
 
 Página estática para GitHub Pages com a curadoria semanal e botões de votação.
 
-Arquivo principal: `index.html`.
+- `index.html`: curadoria mais recente
+- `arquivo/`: histórico de curadorias anteriores
