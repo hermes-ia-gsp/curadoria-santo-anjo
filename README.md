@@ -1,4 +1,4 @@
-# Curadoria Santo Anjo — Hermes IA
+# Curadoria Santo Anjo — Tico
 
 Página estática para GitHub Pages com a curadoria semanal e botões de votação.
 
