@@ -20,7 +20,7 @@
     *{box-sizing:border-box}
     body{margin:0;background:var(--gs-bg);font-family:Inter,Arial,Helvetica,sans-serif;color:var(--gs-charcoal)}
     a{color:inherit}
-    .brand-bars{display:grid;grid-template-columns:1fr;gap:9px;width:240px;margin-bottom:28px}
+    .school-logo{display:block;width:199px;max-width:100%;height:auto;margin:0 0 24px}.brand-column{display:flex;flex-direction:column;align-items:flex-start}.brand-bars{display:grid;grid-template-columns:1fr;gap:9px;width:240px;margin-bottom:28px}
     .bar{height:28px;border-radius:0 999px 999px 0}.lime{background:var(--gs-lime);width:78%}.yellow{background:var(--gs-yellow);width:100%}.orange{background:var(--gs-orange);width:100%}.teal{background:var(--gs-teal);width:100%}
     .hero{background:#fff;padding:42px 0 34px;border-bottom:1px solid var(--gs-line)}
     .wrap{max-width:1080px;margin:0 auto;padding:0 24px}
@@ -41,7 +41,8 @@
 <body>
   <header class="hero">
     <div class="wrap hero-grid">
-      <div>
+      <div class="brand-column">
+        <img class="school-logo" src="https://colegiosantoanjo.com.br/wp-content/uploads/2022/08/logoazul.svg" alt="Colégio Santo Anjo">
         <div class="brand-bars" aria-label="Cores Great Schools">
           <div class="bar lime"></div><div class="bar yellow"></div><div class="bar orange"></div><div class="bar teal"></div>
         </div>
